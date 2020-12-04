@@ -9,10 +9,25 @@ router.get('/checkauth', async (req, res) => {
         if(err){
             res.send("DISCONNECTED")
             try{
-                fs.unlinkSync('../session.json')
+                fs.unlinkSync('../../session.json')
             }catch(err){console.log(err)}
         }
     })
+});
+
+router.get('/logout', async () => {
+            fs.unlink('session.json', function (err) {
+              if (err){
+                console.log(err);
+              } else {
+                console.log('File deleted!');
+                global.authed = false;
+                // fs.writeFileSync('components/last.qr','1@NHOb945kKcvgHauH1/+8nuPePoRCsEvAhgbsCuz+u8L5RT0FTdYV0eL4nUAzJKxYbtFf0QSglWo6ag==,PuZr8limqMXruJOJ+JCojE6Njr3A2EJK4GWhBF5XLFQ=,lfkbZJLD/qOxBujETxYCAg==');
+              };
+            });
+            // try{
+            //     fs.unlink('../session.json')
+            // }catch(err){console.log(err)}
 });
 
 router.get('/getqr', (req,res) => {

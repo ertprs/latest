@@ -21,7 +21,7 @@ router.post('/sendmessage/:chatname', async (req,res) => {
     }else{
         client.getChats().then((data) => {
             data.forEach(chat => {
-                if(chat.id.server==="g.us" && chat.name===chatname){
+                if(chat.id.server==="g.us" && chat.id._serialized===chatname){
                     client.sendMessage(chat.id._serialized,message).then((response)=>{
                         if(response.id.fromMe){
                             res.send({status:'success',message:'Message successfully send to '+chatname})
