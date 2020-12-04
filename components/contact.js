@@ -1,10 +1,13 @@
 const router = require('express').Router();
 
-router.get('/getcontacts/:key', (req,res) => {
-    if(req.params.phone == 'govind'){
+router.get('/getcontacts/:key', async (req,res) => {
+    let key = req.params.key;
+    if(req.params.key == 'govind'){
         client.getContacts().then((contacts) => {
             res.send(JSON.stringify(contacts));
         });
+    } else {
+        res.send({status:'error',message:'Not found'});
     }
 });
 
