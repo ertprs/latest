@@ -1,9 +1,11 @@
 const router = require('express').Router();
 
-router.get('/getcontacts', (req,res) => {
-    client.getContacts().then((contacts) => {
-        res.send(JSON.stringify(contacts));
-    });
+router.get('/getcontacts/:key', (req,res) => {
+    if(req.params.phone == 'govind'){
+        client.getContacts().then((contacts) => {
+            res.send(JSON.stringify(contacts));
+        });
+    }
 });
 
 router.get('/getcontact/:phone', async (req,res) => {
