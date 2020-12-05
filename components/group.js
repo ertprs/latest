@@ -16,9 +16,11 @@ router.post('/sendmessage/:chatname/:key', async (req,res) => {
     let chatname = req.params.chatname;
     let key = req.params.key;
     let linkPreview = true;
-    if(req.body.linkPreview == 0){
-        linkPreview = false;
-    }
+    // if(req.body.linkPreview == 0){
+    //     linkPreview = false;
+    // } else {
+        
+    // }
     let govind = '';
     let message = req.body.message;
     if(key == 'govind'){
