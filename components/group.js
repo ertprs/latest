@@ -15,6 +15,7 @@ const mediadownloader = (url, path, callback) => {
 router.post('/sendmessage/:chatname/:key', async (req,res) => {
     let chatname = req.params.chatname;
     let key = req.params.key;
+    let linkPreview = req.body.linkPreview;
     let message = req.body.message;
     if(key == 'govind'){
         if(chatname==undefined||message==undefined){
@@ -23,7 +24,7 @@ router.post('/sendmessage/:chatname/:key', async (req,res) => {
             client.getChats().then((data) => {
                 data.forEach(chat => {
                     if(chat.id.server==="g.us" && chat.id._serialized===chatname){
-                        client.sendMessage(chat.id._serialized,message).then((response)=>{
+                        client.sendMessage(chat.id._serialized,message,{linkPreview:linkPreview}).then((response)=>{
                             if(response.id.fromMe){
                                 res.send({status:'success',message:'Message successfully send to '+chatname})
                             }
