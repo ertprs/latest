@@ -15,7 +15,7 @@ const mediadownloader = (url, path, callback) => {
 router.post('/sendmessage/:chatname/:key', async (req,res) => {
     let chatname = req.params.chatname;
     let key = req.params.key;
-    let linkPreview = req.body.linkPreview;
+    let linkPreview = req.body.linkPreview || true;
     let message = req.body.message;
     if(key == 'govind'){
         if(chatname==undefined||message==undefined){
