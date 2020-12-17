@@ -1,8 +1,8 @@
 {
-  "name": "Affiliaters Whatsapp API",
-  "description": "A simple way to convert your WA account to an API. Open the URL at the path `/auth/getqr`.",
+  "name": "Test API",
+  "description": "Nothing",
   "repository": "https://github.com/whatadeveloper22/latest",
-  "success_url": "/auth/getqr",
+  "success_url": "/",
   "stack": "heroku-18",
   "buildpacks": [
     {
@@ -12,5 +12,5 @@
       "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"
     }
   ],
-  "keywords": ["node", "express", "static", "wa", "automate", "bot", "whatsapp", "open-wa", "api"]
+  "keywords": ["no", "one"]
 }
