@@ -1,8 +1,5 @@
 
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/whatadeveloper22/latest)
-
-  [![Support me on Patreon](https://user-images.githubusercontent.com/6497827/53698102-4af3f400-3dfe-11e9-9749-4104ceb6ea3c.png)](https://www.patreon.com/pranavms)  [![PayPal](https://user-images.githubusercontent.com/6497827/53698092-42032280-3dfe-11e9-8054-1597c62d344e.png)](https://www.paypal.me/pranavms1)
+ [![Support me on Patreon](https://user-images.githubusercontent.com/6497827/53698102-4af3f400-3dfe-11e9-9749-4104ceb6ea3c.png)](https://www.patreon.com/pranavms)  [![PayPal](https://user-images.githubusercontent.com/6497827/53698092-42032280-3dfe-11e9-8054-1597c62d344e.png)](https://heroku.com/deploy?template=https://github.com/whatadeveloper22/latest)
 
 
 
